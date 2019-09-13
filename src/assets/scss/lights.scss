@@ -43,32 +43,71 @@ body {
   display: block;
   &-red {
     background-color: darken($color1,15%);
-    &:hover {
-      animation: blink1 1.1s step-end infinite;
-    }
     &.router-link-active {
       background-color: $color1;
       box-shadow: 0 0 6em lighten($color1,10%);
+      &.blink {
+      animation: blink1 1.1s step-end infinite;
+    }
     }
   }
   &#color2 {
     background-color: darken($color2,15%);
-    &:hover {
-      animation: blink2 1s step-end infinite;
-    }
     &.router-link-active {
       background-color: $color2;
       box-shadow: 0 0 6em lighten($color2,10%);
+      &.blink {
+      animation: blink2 1s step-end infinite;
+    }
     }
   }
   &#color3 {
     background-color: darken($color3,15%);
-    &:hover {
-      animation: blink3 1s step-end infinite;
-    }
     &.router-link-active {
       background-color: $color3;
       box-shadow: 0 0 6em lighten($color3,10%);
+      &.blink {
+      animation: blink3 1s step-end infinite;
+    }
     }
   }
+}
+
+@keyframes blink1 {
+  0% {
+    background-color: $color1;
+    box-shadow: 0 0 6em lighten($color1,10%);
+  }
+  
+  50% {
+    background-color: darken($color1,15%);
+    box-shadow: 0 0 0em transparent;
+  }
+  
+}
+
+@keyframes blink2 {
+  0% {
+    background-color: $color2;
+    box-shadow: 0 0 6em lighten($color2,10%);
+  }
+  
+  50% {
+    background-color: darken($color2,15%);
+    box-shadow: 0 0 0em transparent;
+  }
+  
+}
+
+@keyframes blink3 {
+  0% {
+    background-color: $color3;
+    box-shadow: 0 0 6em lighten($color3,10%);
+  }
+  
+  50% {
+    background-color: darken($color3,15%);
+    box-shadow: 0 0 0em transparent;
+  }
+  
 }
