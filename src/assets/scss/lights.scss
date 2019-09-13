@@ -25,7 +25,7 @@ body {
   border-radius:30px;
 }
 
-input {
+.color {
   
   //remove default style
   -webkit-appearance: none;
@@ -41,12 +41,12 @@ input {
   vertical-align: middle;
   border-radius: 100%;
   display: block;
-  &#color1 {
+  &-red {
     background-color: darken($color1,15%);
     &:hover {
       animation: blink1 1.1s step-end infinite;
     }
-    &:checked {
+    &.router-link-active {
       background-color: $color1;
       box-shadow: 0 0 6em lighten($color1,10%);
     }
@@ -56,7 +56,7 @@ input {
     &:hover {
       animation: blink2 1s step-end infinite;
     }
-    &:checked {
+    &.router-link-active {
       background-color: $color2;
       box-shadow: 0 0 6em lighten($color2,10%);
     }
@@ -66,7 +66,7 @@ input {
     &:hover {
       animation: blink3 1s step-end infinite;
     }
-    &:checked {
+    &.router-link-active {
       background-color: $color3;
       box-shadow: 0 0 6em lighten($color3,10%);
     }
