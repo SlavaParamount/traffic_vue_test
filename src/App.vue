@@ -4,13 +4,13 @@
       <div class="content-wrapper">
         <h1>Traffic lights</h1>
         <p>{{ link }}</p>
-        <p>{{ blink }}</p>
+        <p>Blink: {{ blink }}</p>
         <p style="font-size: 36px;">{{timeout}}</p>
         <div id="traffic-light">
           <!--  почему не работает v-bind?!?! -->
           <router-link to="./red"  class='color color-red' id="color1" value="color1" v-on:click="changeTo('red')"/></router-link>
           <router-link to = "./yellow" class='color color-yellow blink' id="color2" v-on:click="changeTo('yellow')" value="color2"/><span></span></router-link>
-          <router-link to="./green" class='color color-green blink'  id="color3" value="colors3" v-on:click="changeTo('green')" /><span></span></router-link>
+          <router-link to="./green" class='color color-green '  id="color3" value="colors3" v-on:click="changeTo('green')" /><span></span></router-link>
         </div>
       </div>
     </div>
